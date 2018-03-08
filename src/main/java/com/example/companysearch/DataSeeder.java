@@ -23,12 +23,12 @@ public class DataSeeder implements CommandLineRunner {
 
 		Company motorola = Company.builder()
 				.Name("Motorola").State("IL")
-        .Country("USA")
+                                .Country("USA")
 				.email("epasham@motorola.com").build();
 
 		Company cisco = Company.builder()
 				.Name("Cisco").State("CA")
-        .Country("USA")
+                                .Country("USA")
 				.email("epasham@cisco.com").build();
 
 		repository.deleteAll().thenMany(
