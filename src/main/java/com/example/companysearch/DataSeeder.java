@@ -22,11 +22,13 @@ public class DataSeeder implements CommandLineRunner {
 		log.info("starting data seeding...");
 
 		Company motorola = Company.builder()
+			        .id(UUID.randomUUID().toString())
 				.Name("Motorola").State("IL")
                                 .Country("USA")
 				.email("epasham@motorola.com").build();
 
 		Company cisco = Company.builder()
+			        .id(UUID.randomUUID().toString())
 				.Name("Cisco").State("CA")
                                 .Country("USA")
 				.email("epasham@cisco.com").build();
