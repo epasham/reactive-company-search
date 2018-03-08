@@ -7,7 +7,9 @@ import org.springframework.data.mongodb.repository.Query;
 import reactor.core.publisher.Mono;
 import reactor.core.publisher.Flux;
 
+import org.springframework.stereotype.Repository;
 
+@Repository
 public interface CompanyRepository extends ReactiveCrudRepository<Company, String> {
 
   Mono<Company> findByName(String name);
