@@ -1,6 +1,9 @@
 package com.example.companysearch.repository;
 
+import com.example.companysearch.model.Company;
 import org.springframework.data.repository.reactive.ReactiveCrudRepository;
+import org.springframework.data.mongodb.repository.Query;
+
 import reactor.core.publisher.Mono;
 import reactor.core.publisher.Flux;
 
@@ -12,6 +15,6 @@ public interface CompanyRepository extends ReactiveCrudRepository<Company, Strin
   Flux<Company> findCompanyByCountry(String country);
   
   @Query("{'state' : ?0, 'country' : ?1}")
-	Flux<Company> findByStateAndCountry(String state, String country);
+  Flux<Company> findByStateAndCountry(String state, String country);
   
 }
