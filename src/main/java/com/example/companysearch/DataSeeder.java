@@ -26,13 +26,13 @@ public class DataSeeder implements CommandLineRunner {
 			        .id(UUID.randomUUID().toString())
 				.Name("Motorola").State("IL")
                                 .Country("USA")
-				.email("epasham@motorola.com").build();
+				.Email("epasham@motorola.com").build();
 
 		Company cisco = Company.builder()
 			        .id(UUID.randomUUID().toString())
 				.Name("Cisco").State("CA")
                                 .Country("USA")
-				.email("epasham@cisco.com").build();
+				.Email("epasham@cisco.com").build();
 
 		repository.deleteAll().thenMany(
 				Flux.just(motorola, cisco)
