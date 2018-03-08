@@ -13,7 +13,7 @@ import com.mongodb.reactivestreams.client.MongoClient;
 import com.mongodb.reactivestreams.client.MongoClients;
 import org.springframework.data.mongodb.core.ReactiveMongoTemplate;
 
-@Configuration
+
 @EnableReactiveMongoRepositories
 public class MongoConfig extends AbstractReactiveMongoConfiguration {
 
