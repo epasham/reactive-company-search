@@ -28,12 +28,12 @@ public class MongoConfig extends AbstractReactiveMongoConfiguration {
     String connectionString;
 
     public MongoConfig(@Value("${spring.data.mongodb.database}") String mongoDatabaseName,
-                       @Value("${spring.data.mongodb.host}") String mongoUri,
+                       @Value("${spring.data.mongodb.host}") String mongoHost,
                        @Value("${spring.data.mongodb.port}") String mongoPort,
                        @Value("${spring.data.mongodb.username}") String mongoUsername,
                        @Value("${spring.data.mongodb.password}") String mongoPassword) {
         this.mongoDatabaseName = mongoDatabaseName;
-        this.mongoUri = mongoUri;
+        this.mongoHost = mongoHost;
         this.mongoPort = mongoPort;
         this.mongoUsername = mongoUsername;
         this.mongoPassword = mongoPassword;
@@ -47,7 +47,7 @@ public class MongoConfig extends AbstractReactiveMongoConfiguration {
                 .concat(":")
                 .concat(mongoPassword)
                 .concat("@")
-                .concat(mongoUri)
+                .concat(mongoHost)
                 .concat(":")
                 .concat(mongoPort)
                 .concat("/")
