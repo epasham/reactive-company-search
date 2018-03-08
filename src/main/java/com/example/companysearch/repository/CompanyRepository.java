@@ -6,6 +6,6 @@ import reactor.core.publisher.Flux;
 
 public interface CompanyRepository extends ReactiveCrudRepository<Company, String> {
 
-  Flux<Temperature> findByName(String name);
+  Flux<Company> findByName(String name);
   
 }
