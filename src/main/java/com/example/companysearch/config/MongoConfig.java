@@ -20,7 +20,7 @@ public class MongoConfig extends AbstractReactiveMongoConfiguration {
     private final String mongoConnectionStringPrefix = "mongodb://";
 
     private String mongoDatabaseName;
-    private String mongoUri;
+    private String mongoHost;
     private String mongoPort;
     private String mongoUsername;
     private String mongoPassword;
