@@ -25,10 +25,10 @@ public class Company {
 	private String Name;
 	private String Phone;
 	private String Email;
-  private String City;
-  private String State;
-  private String Zip;
-  private String Country;
+        private String City;
+  	private String State;
+  	private String Zip;
+  	private String Country;
 
 	@CreatedDate
 	private LocalDateTime createdDate;
