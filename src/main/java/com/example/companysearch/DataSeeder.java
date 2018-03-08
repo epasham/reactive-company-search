@@ -1,7 +1,7 @@
 package com.example.companysearch;
 
-import com.spring.reactive.mongo.model.Company;
-import com.spring.reactive.mongo.repository.CompanyRepository;
+import com.example.companysearch.model.Company;
+import com.example.companysearch.repository.CompanyRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
