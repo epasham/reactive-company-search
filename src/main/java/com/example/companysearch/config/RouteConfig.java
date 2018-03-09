@@ -16,9 +16,7 @@ public class RouteConfig {
 
 	@Bean
 	RouterFunction<ServerResponse> routes(CompanyHandler handler) {
-
-		return route(GET("/company"),
-							request -> handler.getAll(request))
+		return route(GET("/company"), reuest -> handler.getAll(request));
 
 	}
 }
