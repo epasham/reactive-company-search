@@ -6,13 +6,19 @@ import com.example.companysearch.repository.CompanyRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import reactor.core.publisher.Flux;
+import reactor.core.publisher.Mono;
+
 @Component
 public class CompanyHandler {
 
+  @Autowired
+	private CompanyRepository repository;
 
-
-
-
+  public Mono<ServerResponse> getAll(ServerRequest request) {
+		Flux<Company> company = repository.findAll();
+		return ServerResponse.ok().body(BodyInserters.fromPublisher(company, Company.class));
+	}
 
 
 
