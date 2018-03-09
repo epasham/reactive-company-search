@@ -13,10 +13,11 @@ import static org.springframework.web.reactive.function.server.RouterFunctions.r
 
 @Configuration
 public class RouteConfig {
-
+	
 	@Bean
 	RouterFunction<ServerResponse> routes(CompanyHandler handler) {
-		
+		return route(GET("/company"), request -> handler.getAll(request));
 
 	}
+	
 }
