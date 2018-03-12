@@ -8,4 +8,4 @@ COPY --from=buildenv /usr/src/app/target/*company-search*.jar app.jar
 
 ENV JAVA_OPTS=""
 ENV PROFILE=""
-ENTRYPOINT ["java", "-Dspring.profiles.active=${PROFILE}", "-jar","app.jar"]
+ENTRYPOINT ["java", "-Dspring.config.location=file:/config/application.properties", "-jar","app.jar"]

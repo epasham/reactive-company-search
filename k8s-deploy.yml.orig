@@ -1,17 +1,5 @@
 ---
 apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: app.cfg
-data:
-  application.properties: |
-    spring.data.mongodb.host=pablo1-lab-node1.eastus.cloudapp.azure.com
-    spring.data.mongodb.port=32017
-    spring.data.mongodb.database=companydb
-    spring.data.mongodb.username=docker
-    spring.data.mongodb.password=docker
----
-apiVersion: v1
 kind: Service
 metadata:
   labels:
@@ -85,19 +73,9 @@ spec:
     spec:
       containers:
       - name: reactivecs
-        image: ekambaram/reactive-company-search:v4
+        image: ekambaram/reactive-company-search:v3
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
           protocol: TCP
           name: rcs-port
-        volumeMounts:
-          - name: app-config
-            mountPath: /config
-      volumes:
-        - name: app-config
-          configMap:
-            name: app.cfg
-            items:
-              - key: application.properties
-                path: application.properties
