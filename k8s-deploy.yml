@@ -5,7 +5,7 @@ metadata:
   name: app.cfg
 data:
   application.properties: |
-    spring.data.mongodb.host=pablo1-lab-node1.eastus.cloudapp.azure.com
+    spring.data.mongodb.host=<>.eastus.cloudapp.azure.com
     spring.data.mongodb.port=32017
     spring.data.mongodb.database=companydb
     spring.data.mongodb.username=docker
