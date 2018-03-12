@@ -41,8 +41,6 @@ public class DataSeeder implements CommandLineRunner {
 				throwable ->  log.error("Could not save company", throwable ),
 		() -> log.info("Finished data seeder..."));
 
-		repository.count().subscribe(c -> log.info("Inserted " + c + " companies!"));
-
 
 	}
 }
