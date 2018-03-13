@@ -12,14 +12,6 @@ node {
         app = docker.build("ekambaram/reactive-company-search")
     }
 
-    stage('Test image') {
-        /* Ideally, we would run a test framework against our image.
-         * Just an example */
-        app.inside {
-            sh 'echo "Tests passed"'
-        }
-    }
-
     stage('Push image') {
         /* Finally, we'll push the image with two tags:
          * First, the incremental build number from Jenkins
